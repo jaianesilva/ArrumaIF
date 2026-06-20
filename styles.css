@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f5f7f5;
+  min-height: 100vh;
+}
+
+/* Layout principal da aplicação, depois do login */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.conteudo-principal {
+  margin-left: 220px;
+  flex: 1;
+  padding: 28px 32px;
+}
+
+/* Tela de login */
+.tela-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d8c3e 0%, #1e6b2e 100%);
+}
+
+/* Kanban */
+.kanban-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.kanban-coluna {
+  background: #f0f7f0;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid #c8e6c9;
+}
+
+.kanban-card {
+  background: white;
+  border-radius: 8px;
+  padding: 13px;
+  margin-bottom: 9px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  border-left: 3px solid #e0e0e0;
+  transition: transform 0.15s;
+}
+
+.kanban-card:hover {
+  transform: translateY(-2px);
+}
+
+.kanban-card.urgente { border-left-color: #c62828; }
+.kanban-card.alta    { border-left-color: #e65100; }
+.kanban-card.media   { border-left-color: #f9a825; }
+.kanban-card.baixa   { border-left-color: #2e7d32; }
+
+.kanban-card-titulo {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
